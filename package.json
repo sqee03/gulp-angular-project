@@ -1,0 +1,29 @@
+{
+  "name": "gulp-angular-skeleton",
+  "version": "1.0.0",
+  "description": "Simple Angular skeleton and Gulp build tasks for your new project",
+  "author": "Luboš Hradecký <lubos.hradecky@gmail.com>",
+  "dependencies": {
+    "browser-sync": "*",
+    "del": "*",
+    "event-stream": "*",
+    "gulp": "*",
+    "gulp-angular-filesort": "*",
+    "gulp-dir": "*",
+    "gulp-inject": "*",
+    "gulp-order": "*",
+    "gulp-rename": "*",
+    "gulp-sass": "*",
+    "main-bower-files": "*",
+    "require-dir": "*",
+    "run-sequence": "*"
+  },
+  "scripts": {
+    "postinstall": "bower install --force-latest",
+    "prestart": "npm install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sqee03/gulp-angular-project.git"
+  }
+}

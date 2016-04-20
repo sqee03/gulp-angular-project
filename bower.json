@@ -1,0 +1,12 @@
+{
+  "name": "gulp-angular-skeleton",
+  "description": "Simple Angular skeleton and Gulp build tasks for your new project.",
+  "authors": [
+    "Luboš Hradecký <lubos.hradecky@gmail.com>"
+  ],
+  "dependencies": {
+    "angular": "*",
+    "angular-ui-router": "*"
+  },
+  "devDependencies": {}
+}
