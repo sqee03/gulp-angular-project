@@ -1,9 +1,6 @@
-# Angular Gulp Project - skeleton
+# Revlo App
 
-Simple skeleton for your Angular project.  
-Developer dependencies are managed with Npm.  
-Project dependencies are managed with Bower.  
-Build environment is handled by Gulp.
+Revlo extension app.  
 
 ## Installation
 
