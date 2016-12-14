@@ -11,8 +11,7 @@ gulp.task('sync', function() {
         config.build.json,
         config.build.js,
         config.build.css,
-        config.build.tpl,
-        config.build.index
+        config.build.html
     ];
 
     browserSync.init(files, {

@@ -1,36 +1,11 @@
 'use strict';
 
-angular.module('revloApp', [
-        // Libraries
-        'ui.router',
-        'ngAnimate',
-        'momentjs', // custom req. library
-        'lodash', // custom req. library
-
-        // Offlinejs
-        'offlinejs',
-
-        // Notifications
-        'angular-growl',
-        'notifications',
-
-        // Template cache
-        'templateCache',
-
-        // Filters
-        'filters',
-
-        // Common components
-        'components',
-
-        // App
-        'playerInfo',
+angular.module('myApp', [
+        'ui.router'
     ])
 
     .config(
-        function($stateProvider, $urlRouterProvider, $qProvider) {
-            // Workaround for routing errors
-            $qProvider.errorOnUnhandledRejections(false);
+        function($stateProvider, $urlRouterProvider) {
 
             // Routing
             $stateProvider
@@ -40,26 +15,17 @@ angular.module('revloApp', [
                     url: '',
                     template: '<ui-view/>',
                     resolve: {
-                        config: function (configService) {
-                            return configService.setConfig();
-                        },
-                        dataContract: function (dataContractService) {
-                            dataContractService.setDataContract();
+                        config: function() {
+                            console.info('Put some init config loading here ...');
                         }
                     }
                 })
-                // Starting page
-                .state({
-                    name: 'home',
-                    url: '/',
-                    templateUrl: 'views/home.html'
-                })
-                // Test page
-                .state({
-                    name: 'test',
-                    url: '/test',
-                    templateUrl: 'views/test.html'
+                // Home page
+                .state('app.home', {
+                    url: '/home',
+                    controller: 'yourCtrl',
+                    template: '<h1>{{greetings}}</h1>'
                 })
                 // Default redirect
-                $urlRouterProvider.otherwise('/');
+                $urlRouterProvider.otherwise("/home");
     });
